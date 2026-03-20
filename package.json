@@ -1,0 +1,12 @@
+{
+  "name": "smartadapt-website",
+  "version": "1.0.0",
+  "description": "SmartAdapt - Adaptive Digital Health Technology",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html styles.css script.js dist/",
+    "start": "npx serve dist -s -l 8080"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}

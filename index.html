@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartAdapt — Adaptive Digital Health Technology</title>
+  <meta name="description" content="SmartAdapt by Tetradapt LLC delivers adaptive smart home, patient education, and accessibility solutions for rehabilitation and post-discharge care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Text:wght@400;500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#" class="nav__logo">
+        <span class="material-symbols-outlined">home_health</span>
+        <span>SmartAdapt</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#smartroom">SmartRoom</a></li>
+        <li><a href="#smarthome">SmartHome</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#contact" class="nav__cta">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__container">
+      <div class="hero__chip">Adaptive Health Technology</div>
+      <h1 class="hero__title">Empowering Recovery<br>Through Smart Technology</h1>
+      <p class="hero__subtitle">From hospital room to home — SmartAdapt delivers voice-controlled environments, intelligent patient education, and accessibility tools for rehabilitation and beyond.</p>
+      <div class="hero__actions">
+        <a href="#products" class="btn btn--filled">Explore Products</a>
+        <a href="#contact" class="btn btn--outlined">Get in Touch</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__number">4+</span>
+          <span class="stat__label">Healthcare Facilities</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">6</span>
+          <span class="stat__label">Product Lines</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">HIPAA</span>
+          <span class="stat__label">Compliant</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Products Overview -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__chip">Our Platform</div>
+        <h2 class="section__title">A Connected Ecosystem for Rehabilitation</h2>
+        <p class="section__subtitle">SmartAdapt bridges the gap between inpatient rehabilitation and post-discharge independence with an integrated suite of digital health tools.</p>
+      </div>
+      <div class="cards cards--grid">
+        <div class="card card--elevated">
+          <div class="card__icon card__icon--blue">
+            <span class="material-symbols-outlined">bedroom_parent</span>
+          </div>
+          <h3 class="card__title">SmartRoom</h3>
+          <p class="card__text">Voice-controlled hospital room environments that adapt to each patient's rehabilitation needs and abilities.</p>
+          <a href="#smartroom" class="card__link">Learn more <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="card card--elevated">
+          <div class="card__icon card__icon--green">
+            <span class="material-symbols-outlined">home</span>
+          </div>
+          <h3 class="card__title">SmartHome</h3>
+          <p class="card__text">Post-discharge mobile app connecting patients to their rehab community with ongoing smart home device control.</p>
+          <a href="#smarthome" class="card__link">Learn more <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="card card--elevated">
+          <div class="card__icon card__icon--purple">
+            <span class="material-symbols-outlined">school</span>
+          </div>
+          <h3 class="card__title">Patient Education</h3>
+          <p class="card__text">AI-powered education platform using RAG and knowledge graphs to deliver personalized health information.</p>
+          <a href="#education" class="card__link">Learn more <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="card card--elevated">
+          <div class="card__icon card__icon--orange">
+            <span class="material-symbols-outlined">accessibility_new</span>
+          </div>
+          <h3 class="card__title">Accessibility</h3>
+          <p class="card__text">Tongue click sound recognition and alternative input methods for patients with limited mobility.</p>
+          <a href="#accessibility" class="card__link">Learn more <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="card card--elevated">
+          <div class="card__icon card__icon--teal">
+            <span class="material-symbols-outlined">assignment</span>
+          </div>
+          <h3 class="card__title">PatientEcho</h3>
+          <p class="card__text">HIPAA-compliant survey platform with ML-powered risk scoring, integrating SurveyMonkey and Qualtrics.</p>
+          <a href="#patientecho" class="card__link">Learn more <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="card card--elevated">
+          <div class="card__icon card__icon--red">
+            <span class="material-symbols-outlined">campaign</span>
+          </div>
+          <h3 class="card__title">Broadcast Messaging</h3>
+          <p class="card__text">Hospital-to-patient messaging service keeping discharged patients connected to their care community.</p>
+          <a href="#contact" class="card__link">Coming soon <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SmartRoom Section -->
+  <section class="section section--alt" id="smartroom">
+    <div class="container">
+      <div class="feature">
+        <div class="feature__content">
+          <div class="section__chip">Inpatient Rehabilitation</div>
+          <h2 class="feature__title">SmartRoom</h2>
+          <p class="feature__text">Transform hospital rooms into adaptive, voice-controlled environments. SmartRoom integrates with hospital systems to give SCI patients independence and control during their rehabilitation stay.</p>
+          <ul class="feature__list">
+            <li><span class="material-symbols-outlined">mic</span> Voice-activated room controls via VAPI AI</li>
+            <li><span class="material-symbols-outlined">devices</span> Smart device management (lights, fans, blinds)</li>
+            <li><span class="material-symbols-outlined">security</span> Tier-0 security — zero secrets on edge devices</li>
+            <li><span class="material-symbols-outlined">hub</span> Home Assistant integration with multi-tenant support</li>
+            <li><span class="material-symbols-outlined">record_voice_over</span> Alexa scene automation with voice authentication</li>
+          </ul>
+        </div>
+        <div class="feature__visual">
+          <div class="feature__card">
+            <div class="feature__card-header">
+              <span class="material-symbols-outlined">record_voice_over</span>
+              Voice Command
+            </div>
+            <div class="feature__card-body">
+              <div class="voice-demo">
+                <div class="voice-demo__wave"></div>
+                <p class="voice-demo__text">"Turn on the lights"</p>
+                <div class="voice-demo__response">
+                  <span class="material-symbols-outlined">check_circle</span>
+                  Lights turned on in Room 204
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SmartHome Section -->
+  <section class="section" id="smarthome">
+    <div class="container">
+      <div class="feature feature--reverse">
+        <div class="feature__content">
+          <div class="section__chip">Post-Discharge Care</div>
+          <h2 class="feature__title">SmartHome</h2>
+          <p class="feature__text">Recovery doesn't stop at discharge. SmartHome extends rehabilitation support into patients' homes, maintaining community connections and providing ongoing smart device control.</p>
+          <ul class="feature__list">
+            <li><span class="material-symbols-outlined">smartphone</span> Mobile app for device control and subscriptions</li>
+            <li><span class="material-symbols-outlined">group</span> Community connection to rehab facility</li>
+            <li><span class="material-symbols-outlined">notifications</span> Push notifications and messaging</li>
+            <li><span class="material-symbols-outlined">settings_remote</span> Raspberry Pi edge devices for home setup</li>
+            <li><span class="material-symbols-outlined">lock</span> JWT-authenticated secure voice commands</li>
+          </ul>
+        </div>
+        <div class="feature__visual">
+          <div class="feature__phone">
+            <div class="phone__header">
+              <span class="phone__time">9:41</span>
+              <span class="phone__title">SmartHome</span>
+            </div>
+            <div class="phone__body">
+              <div class="phone__greeting">Good morning, Alex</div>
+              <div class="phone__devices">
+                <div class="phone__device phone__device--on">
+                  <span class="material-symbols-outlined">light</span>
+                  <span>Living Room</span>
+                  <span class="phone__device-status">On</span>
+                </div>
+                <div class="phone__device">
+                  <span class="material-symbols-outlined">mode_fan</span>
+                  <span>Bedroom Fan</span>
+                  <span class="phone__device-status">Off</span>
+                </div>
+                <div class="phone__device phone__device--on">
+                  <span class="material-symbols-outlined">thermostat</span>
+                  <span>Thermostat</span>
+                  <span class="phone__device-status">72&deg;F</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section section--alt" id="education">
+    <div class="container">
+      <div class="feature">
+        <div class="feature__content">
+          <div class="section__chip">AI-Powered Learning</div>
+          <h2 class="feature__title">Patient Education</h2>
+          <p class="feature__text">Intelligent health education powered by retrieval-augmented generation (RAG) and multi-agent knowledge graphs. Patients get personalized, contextual answers to their health questions.</p>
+          <ul class="feature__list">
+            <li><span class="material-symbols-outlined">auto_awesome</span> LLM-powered contextual answers (LLaMA 3.3 70B)</li>
+            <li><span class="material-symbols-outlined">account_tree</span> Knowledge graph with medical entity relationships</li>
+            <li><span class="material-symbols-outlined">upload_file</span> Multi-format document processing (PDF, DOCX, images)</li>
+            <li><span class="material-symbols-outlined">spatial_audio</span> Voice-optimized responses for text-to-speech</li>
+            <li><span class="material-symbols-outlined">smart_toy</span> 6 specialized AI agents for comprehensive answers</li>
+          </ul>
+        </div>
+        <div class="feature__visual">
+          <div class="feature__card feature__card--chat">
+            <div class="feature__card-header">
+              <span class="material-symbols-outlined">smart_toy</span>
+              Health Educator
+            </div>
+            <div class="feature__card-body">
+              <div class="chat">
+                <div class="chat__msg chat__msg--user">What is autonomic dysreflexia?</div>
+                <div class="chat__msg chat__msg--ai">
+                  <div class="chat__typing">
+                    <span></span><span></span><span></span>
+                  </div>
+                  Autonomic dysreflexia is a serious condition that can occur in spinal cord injuries at T6 or above. It causes a sudden spike in blood pressure triggered by stimuli below the injury level...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accessibility / Tongue Click Section -->
+  <section class="section" id="accessibility">
+    <div class="container">
+      <div class="feature feature--reverse">
+        <div class="feature__content">
+          <div class="section__chip">Inclusive Interfaces</div>
+          <h2 class="feature__title">Tongue Click Recognition</h2>
+          <p class="feature__text">For patients with limited mobility, traditional input methods aren't enough. Our real-time tongue click sound recognition enables hands-free device control through simple, natural sounds.</p>
+          <ul class="feature__list">
+            <li><span class="material-symbols-outlined">hearing</span> Real-time audio stream analysis at 44.1 kHz</li>
+            <li><span class="material-symbols-outlined">analytics</span> Multi-feature acoustic detection (onset, frequency, spectral)</li>
+            <li><span class="material-symbols-outlined">tune</span> Adjustable sensitivity thresholds (0.2–0.4)</li>
+            <li><span class="material-symbols-outlined">speed</span> 100ms detection chunks for instant response</li>
+            <li><span class="material-symbols-outlined">devices</span> Cross-platform support (macOS, Linux, Windows)</li>
+          </ul>
+        </div>
+        <div class="feature__visual">
+          <div class="feature__card">
+            <div class="feature__card-header">
+              <span class="material-symbols-outlined">graphic_eq</span>
+              Sound Detection
+            </div>
+            <div class="feature__card-body">
+              <div class="waveform">
+                <div class="waveform__bars">
+                  <div class="waveform__bar" style="--h: 20%"></div>
+                  <div class="waveform__bar" style="--h: 35%"></div>
+                  <div class="waveform__bar" style="--h: 15%"></div>
+                  <div class="waveform__bar" style="--h: 45%"></div>
+                  <div class="waveform__bar" style="--h: 90%"></div>
+                  <div class="waveform__bar waveform__bar--active" style="--h: 100%"></div>
+                  <div class="waveform__bar waveform__bar--active" style="--h: 85%"></div>
+                  <div class="waveform__bar" style="--h: 40%"></div>
+                  <div class="waveform__bar" style="--h: 25%"></div>
+                  <div class="waveform__bar" style="--h: 30%"></div>
+                  <div class="waveform__bar" style="--h: 20%"></div>
+                  <div class="waveform__bar" style="--h: 15%"></div>
+                </div>
+                <div class="waveform__label">
+                  <span class="material-symbols-outlined">check_circle</span>
+                  Click detected — Confidence: 0.87
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PatientEcho Section -->
+  <section class="section section--alt" id="patientecho">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__chip">Feedback & Analytics</div>
+        <h2 class="section__title">PatientEcho</h2>
+        <p class="section__subtitle">A HIPAA-compliant survey platform with ML-powered risk scoring that centralizes patient feedback from SurveyMonkey and Qualtrics across multiple healthcare facilities.</p>
+      </div>
+      <div class="cards cards--three">
+        <div class="card card--filled">
+          <span class="material-symbols-outlined card__icon-inline">shield</span>
+          <h3 class="card__title">HIPAA Compliant</h3>
+          <p class="card__text">AES-256 field-level encryption, comprehensive audit logging, and role-based access control with Duo MFA.</p>
+        </div>
+        <div class="card card--filled">
+          <span class="material-symbols-outlined card__icon-inline">psychology</span>
+          <h3 class="card__title">ML Risk Scoring</h3>
+          <p class="card__text">Real-time machine learning analysis of survey responses to identify at-risk patients and flag urgent concerns.</p>
+        </div>
+        <div class="card card--filled">
+          <span class="material-symbols-outlined card__icon-inline">integration_instructions</span>
+          <h3 class="card__title">FHIR Integration</h3>
+          <p class="card__text">Connect with EHR systems via HAPI FHIR R4 standards for seamless clinical data interoperability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Section -->
+  <section class="section" id="technology">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__chip">Built for Healthcare</div>
+        <h2 class="section__title">Enterprise-Grade Technology</h2>
+        <p class="section__subtitle">Every component is built with security, compliance, and reliability at its core.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <span class="material-symbols-outlined">lock</span>
+          <h4>Zero-Trust Security</h4>
+          <p>JWT authentication, Tier-0 edge security, encrypted communications</p>
+        </div>
+        <div class="tech-item">
+          <span class="material-symbols-outlined">cloud</span>
+          <h4>Cloud Native</h4>
+          <p>Docker containerized, deployed on DigitalOcean, Railway, and Azure</p>
+        </div>
+        <div class="tech-item">
+          <span class="material-symbols-outlined">hub</span>
+          <h4>Multi-Tenant</h4>
+          <p>Serve multiple facilities with isolated data and role-based access</p>
+        </div>
+        <div class="tech-item">
+          <span class="material-symbols-outlined">verified</span>
+          <h4>HIPAA Ready</h4>
+          <p>Field-level encryption, audit trails, and compliant data handling</p>
+        </div>
+        <div class="tech-item">
+          <span class="material-symbols-outlined">auto_awesome</span>
+          <h4>AI Powered</h4>
+          <p>LLaMA, GPT, knowledge graphs, and ML risk scoring</p>
+        </div>
+        <div class="tech-item">
+          <span class="material-symbols-outlined">memory</span>
+          <h4>Edge Computing</h4>
+          <p>Raspberry Pi devices for local voice processing and smart home control</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section--dark" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__chip section__chip--light">Get Started</div>
+        <h2 class="section__title section__title--light">Ready to Transform Patient Care?</h2>
+        <p class="section__subtitle section__subtitle--light">Whether you're a rehabilitation facility, hospital, or healthcare innovator — let's build the future of adaptive care together.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <span class="material-symbols-outlined">mail</span>
+          <h4>Email Us</h4>
+          <a href="mailto:info@smartadapt.us">info@smartadapt.us</a>
+        </div>
+        <div class="contact-card">
+          <span class="material-symbols-outlined">domain</span>
+          <h4>Organization</h4>
+          <p>Tetradapt LLC</p>
+        </div>
+        <div class="contact-card">
+          <span class="material-symbols-outlined">location_on</span>
+          <h4>Partners</h4>
+          <p>NRH &middot; QLI &middot; University of Utah</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <span class="material-symbols-outlined">home_health</span>
+          <span>SmartAdapt</span>
+          <span class="footer__divider">by Tetradapt LLC</span>
+        </div>
+        <p class="footer__copy">&copy; 2026 Tetradapt LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
