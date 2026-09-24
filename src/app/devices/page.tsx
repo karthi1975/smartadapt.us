@@ -32,7 +32,7 @@ export default function DevicesPage() {
       <Section background="cream" id="devices">
         <SectionHeading
           eyebrow="Tetradapt hardware"
-          title="Five devices, one system"
+          title="Many devices, one system"
           lead="Each device runs on its own or as part of a Smart Hospital or Smart Home installation. Ask for a quote on any of them and we will come back with options for your rooms or your home."
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

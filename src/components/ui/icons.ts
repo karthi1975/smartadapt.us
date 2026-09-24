@@ -1,5 +1,9 @@
 import {
   AcademicCapIcon,
+  AdjustmentsHorizontalIcon,
+  ArrowRightStartOnRectangleIcon,
+  ExclamationTriangleIcon,
+  MegaphoneIcon,
   ArrowDownIcon,
   ArrowPathIcon,
   ArrowRightIcon,
@@ -138,4 +142,8 @@ export const icons: Record<IconName, IconComponent> = {
   quote: ChatBubbleBottomCenterTextIcon,
   'thumbs-up': HandThumbUpIcon,
   inbox: InboxIcon,
+  megaphone: MegaphoneIcon,
+  warning: ExclamationTriangleIcon,
+  door: ArrowRightStartOnRectangleIcon,
+  adjustments: AdjustmentsHorizontalIcon,
 }

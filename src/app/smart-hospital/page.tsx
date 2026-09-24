@@ -157,7 +157,7 @@ export default function SmartHospitalPage() {
           title="Connected to the systems you already run"
           lead="Electronic health record, nurse call, beds, patient portal, feedback, location services and ticketing. The system communicates with any device that supports mainstream protocols, and we certify new ones."
         />
-        <LogoStrip logos={partnersByKind('integration')} extras={integrationsWithoutLogo} />
+        <LogoStrip variant="grid" logos={partnersByKind('integration')} extras={integrationsWithoutLogo} />
       </Section>
 
       <Section id="results">

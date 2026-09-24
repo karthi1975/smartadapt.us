@@ -73,6 +73,10 @@ export type IconName =
   | 'quote'
   | 'thumbs-up'
   | 'inbox'
+  | 'megaphone'
+  | 'warning'
+  | 'door'
+  | 'adjustments'
 
 export interface Action {
   label: string
@@ -121,6 +125,8 @@ export interface Partner {
   logo: ImageRef
   href?: string
   kind: 'deployment' | 'integration' | 'research' | 'installer'
+  /** Render a white logo file in black so it shows on light backgrounds. */
+  darken?: boolean
 }
 
 export interface Deployment {
@@ -155,6 +161,8 @@ export interface Testimonial {
   org?: string
   /** Only verified quotes render. */
   verified: boolean
+  /** Link for the attribution line (for example the study's publications). */
+  href?: string
   source?: string
 }
 

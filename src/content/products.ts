@@ -16,7 +16,7 @@ export const families: Product[] = [
     route: '/smart-hospital',
     family: 'smart-hospital',
     summary:
-      'Patient-controlled rooms for rehabilitation and acute care. Lights, blinds, temperature, TV, doors and more, through voice, touch, breath and other adaptive inputs, integrated with your clinical systems.',
+      'Patient-controlled rooms for rehabilitation and acute care. Lights, blinds, temperature, TV/Entertainment, doors and more, through voice, touch, breath and other adaptive inputs, integrated with your clinical systems.',
     icon: 'hospital',
     tracks: ['hospital'],
   },
@@ -46,7 +46,7 @@ export const families: Product[] = [
     route: '/devices',
     family: 'devices',
     summary:
-      'Tetradapt hardware that runs the system and connects to it: presence sensor, enterprise Bluetooth, standalone voice, sip-and-puff interface and elevator voice controller.',
+      'Tetradapt hardware that runs the system and connects to it: presence and fall detection sensors, enterprise Bluetooth, standalone voice, a sip-and-puff interface, and controllers for elevators, powered doors and beds.',
     icon: 'devices',
     tracks: ['hospital', 'home'],
   },
@@ -119,7 +119,42 @@ export const devices: Product[] = [
       'Voice control for building elevators, so a person in a power chair can call the elevator and choose a floor without help.',
     details: ['Integrates with building elevator systems', 'Part of an accessibility-first building'],
     icon: 'elevator',
-    tracks: ['hospital'],
+    tracks: ['hospital', 'home'],
+  },
+  // Added 2026-09-24 from the client's change list. Fall detection copy is the client's;
+  // the door and bed controller descriptions are drafted for client approval.
+  {
+    slug: 'fall-detection-sensor',
+    name: 'Fall Detection Sensor',
+    route: '/devices#fall-detection-sensor',
+    family: 'devices',
+    summary:
+      'Fall detection without video cameras. These small devices can be placed in patient rooms and bathrooms, where falls more commonly occur.',
+    details: ['No video cameras', 'Fits patient rooms and bathrooms', 'Used in hospital rooms and homes'],
+    icon: 'warning',
+    tracks: ['hospital', 'home'],
+  },
+  {
+    slug: 'universal-powered-door-controller',
+    name: 'Universal Powered Door Controller',
+    route: '/devices#universal-powered-door-controller',
+    family: 'devices',
+    summary:
+      'Opens and closes powered doors by voice, touch, sip-and-puff or any other input a person uses, so they can come and go without waiting for help.',
+    details: ['Works with powered door operators', 'Same controls as the rest of the room or home'],
+    icon: 'door',
+    tracks: ['hospital', 'home'],
+  },
+  {
+    slug: 'universal-bed-controller',
+    name: 'Universal Bed Controller',
+    route: '/devices#universal-bed-controller',
+    family: 'devices',
+    summary:
+      'Voice and adaptive control of an adjustable bed at home, so a person can change position without help.',
+    details: ['Voice, touch, breath or other adaptive input', 'For adjustable beds at home'],
+    icon: 'adjustments',
+    tracks: ['home'],
   },
 ]
 
@@ -153,7 +188,7 @@ export const hospitalControls = {
     'Door operators',
     'Building elevators',
     'Bed positioning',
-    'TV and cable',
+    'TV/Entertainment',
     'Streaming apps',
     'Music (Bluetooth)',
     'Video calls',
@@ -276,6 +311,27 @@ export const modules: Product[] = [
     tracks: ['hospital', 'home'],
   },
   // Care team
+  {
+    slug: 'fall-detection',
+    name: 'Fall Detection',
+    route: '/active-living#fall-detection',
+    family: 'active-living',
+    audience: 'care-team',
+    summary: 'Fall detection without video cameras. These small devices can be placed in patient rooms and bathrooms where falls more commonly occur.',
+    icon: 'warning',
+    tracks: ['hospital', 'home'],
+  },
+  {
+    slug: 'broadcast-messages',
+    name: 'Broadcast Messages',
+    route: '/active-living#broadcast-messages',
+    family: 'active-living',
+    audience: 'care-team',
+    summary:
+      'Stay in touch with patient populations. Hospital staff can send messages to Smart Hospital and Smart Home application users. The system supports message creation workflows and can target messages to specific patient populations.',
+    icon: 'megaphone',
+    tracks: ['hospital', 'home'],
+  },
   {
     slug: 'stimulation-protocols',
     name: 'Stimulation Protocols',

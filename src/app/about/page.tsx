@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import CTABanner from '@/components/sections/CTABanner'
 import PageHero from '@/components/sections/PageHero'
+import ResearchIntro from '@/components/sections/ResearchIntro'
 import { Card } from '@/components/ui/Card'
 import Icon from '@/components/ui/Icon'
 import LogoStrip from '@/components/ui/LogoStrip'
@@ -82,7 +83,7 @@ export default function AboutPage() {
               as="h3"
               media={
                 <div className="relative mx-auto aspect-square max-w-md overflow-hidden rounded-2xl bg-brand-cream lg:mx-0">
-                  <Image src={person.image.src} alt={person.image.alt} fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
+                  <Image src={person.image.src} alt={person.image.alt} fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover object-top" />
                 </div>
               }
               mediaSide={index % 2 === 0 ? 'left' : 'right'}
@@ -106,7 +107,7 @@ export default function AboutPage() {
         />
         <LogoStrip
           logos={partnersByKind('deployment')}
-          extras={['Craig H. Neilsen Rehabilitation Hospital', 'Masimo', 'PEDEL, University of Utah']}
+          extras={['PEDEL, University of Utah']}
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {awards.map((award) => (
@@ -156,9 +157,10 @@ export default function AboutPage() {
           }}
           eyebrow="Research"
           title="Proven by peer-reviewed research"
-          lead="Our staff serve as principal investigators and collaborators with the University of Utah PEDEL lab. Five studies so far cover patient and staff experience, technology adoption after spinal cord injury and patient education."
           actions={[{ label: 'Read the research', href: '/research' }]}
-        />
+        >
+          <ResearchIntro />
+        </SplitSection>
       </Section>
 
       <CTABanner audience="both" />

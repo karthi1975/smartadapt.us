@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import CTABanner from '@/components/sections/CTABanner'
 import HomeHero from '@/components/sections/HomeHero'
+import ResearchIntro from '@/components/sections/ResearchIntro'
 import TwoTrackChooser from '@/components/sections/TwoTrackChooser'
 import { FeatureCard, TestimonialCard } from '@/components/ui/Card'
 import LogoStrip from '@/components/ui/LogoStrip'
@@ -43,7 +44,6 @@ export default function HomePage() {
         <LogoStrip
           heading="Deployed and trusted at"
           logos={partnersByKind('deployment')}
-          extras={['Craig H. Neilsen Rehabilitation Hospital', 'Masimo']}
         />
       </Section>
 
@@ -92,7 +92,7 @@ export default function HomePage() {
           <SectionHeading eyebrow="In their words" title="What control feels like from the bed" />
           <div className={verifiedTestimonials.length === 1 ? 'max-w-2xl' : 'grid gap-6 md:grid-cols-2 lg:grid-cols-3'}>
             {verifiedTestimonials.map((t) => (
-              <TestimonialCard key={t.quote} quote={t.quote} name={t.name} role={t.role} org={t.org} />
+              <TestimonialCard key={t.quote} quote={t.quote} name={t.name} role={t.role} org={t.org} href={t.href} />
             ))}
           </div>
         </Section>
@@ -104,12 +104,13 @@ export default function HomePage() {
           mediaSide="left"
           eyebrow="Research"
           title="Research-backed and peer-reviewed"
-          lead={`Our staff serve as principal investigators and collaborators with the University of Utah PEDEL lab. ${computed.publications.value} peer-reviewed studies so far cover patient and staff experience, technology adoption after spinal cord injury and patient education.`}
           actions={[
             { label: 'Read the research', href: '/research' },
             { label: 'Our story', href: '/about' },
           ]}
-        />
+        >
+          <ResearchIntro />
+        </SplitSection>
       </Section>
 
       <CTABanner audience="both" />

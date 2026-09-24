@@ -10,6 +10,7 @@ import type { Award, Deployment, Person, TimelineEvent } from './types'
 export const mission = {
   headline: 'Technology that gives control back.',
   body: [
+    'Independence is more than a convenience — it is dignity, confidence, and quality of life. Our Smart Hospital and Smart Home technologies were developed alongside healthcare researchers and validated by patients, families, clinicians, and caregivers. With active implementations across healthcare and residential settings, this platform is proving its value where it matters most: in the lives of real people.',
     'Not technology for its own sake. Tetradapt exists to offer people the greatest degree of independence, control and quality of life after a catastrophic injury or illness.',
     'A person with limited function should be able to experience, navigate and interact with a hospital room, and later a home, with the same control and fluidity as anyone else. That is the standard we build to.',
   ],
@@ -58,6 +59,11 @@ export const timeline: TimelineEvent[] = [
     description:
       'Patients at NRH originate 1.9 million room interactions a year across 75 rooms, and the feedback module reaches care teams in real time.',
   },
+  {
+    year: '2026',
+    title: 'NIH, NSF and other major grant awards',
+    description: 'Additional hospital and residential deployments underway.',
+  },
 ]
 
 export const people: Person[] = [
@@ -87,11 +93,12 @@ export const people: Person[] = [
 export const deployments: Deployment[] = [
   { name: 'Craig H. Neilsen Rehabilitation Hospital (NRH), University of Utah Health', status: 'existing', note: '75 patient rooms' },
   { name: 'University of Utah Community Clinics', status: 'existing' },
+  { name: 'Discharged patient residence', status: 'existing' },
   { name: 'University of Utah Hospital', status: 'inProgress' },
   { name: 'University of Utah West Valley', status: 'inProgress' },
   { name: 'QLI of Omaha', status: 'inProgress' },
-  { name: 'Discharged patient homes', status: 'inProgress' },
   { name: 'One U Center', status: 'planned' },
+  { name: 'Several other confidential sites', status: 'planned' },
 ]
 
 export const deploymentStatusLabels: Record<Deployment['status'], string> = {

@@ -91,10 +91,12 @@ interface TestimonialCardProps {
   name: string
   role: string
   org?: string
+  /** Makes the attribution a link, for example to the study's publications. */
+  href?: string
   className?: string
 }
 
-export function TestimonialCard({ quote, name, role, org, className }: TestimonialCardProps) {
+export function TestimonialCard({ quote, name, role, org, href, className }: TestimonialCardProps) {
   return (
     <figure className={cn(surface, 'flex h-full flex-col p-8', className)}>
       <Icon name="quote" className="h-8 w-8 text-brand-red" />
@@ -103,10 +105,23 @@ export function TestimonialCard({ quote, name, role, org, className }: Testimoni
       </blockquote>
       <figcaption className="mt-6 border-t border-brand-line pt-4 text-sm">
         <span className="block font-semibold text-brand-black">{name}</span>
-        <span className="block text-brand-gray">
-          {role}
-          {org ? `, ${org}` : ''}
-        </span>
+        {href ? (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-brand-gray underline decoration-brand-red/40 underline-offset-4 hover:text-brand-red"
+          >
+            {role}
+            {org ? `, ${org}` : ''}
+            <span className="sr-only"> (opens in new tab)</span>
+          </a>
+        ) : (
+          <span className="block text-brand-gray">
+            {role}
+            {org ? `, ${org}` : ''}
+          </span>
+        )}
       </figcaption>
     </figure>
   )

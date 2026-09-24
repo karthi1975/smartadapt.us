@@ -155,73 +155,53 @@ export function trackLabel(value: string): string {
 /* ----------------------------------------------------------------- partners */
 
 /**
- * Client partner list ("2026 website overview.docx"): NRH, UUH, QLI, Masimo. Masimo has no
- * logo yet. NRH is part of University of Utah Health. Integrations from the Smart Hospital page.
+ * Deployment partners: University of Utah Health, the Craig H. Neilsen Rehabilitation Hospital (NRH,
+ * part of University of Utah Health) and QLI.
  */
 export const partners: Partner[] = [
-  {
-    slug: 'uofu-health',
-    name: 'University of Utah Health',
-    logo: { src: '/Logo/uofu-health-new.svg', alt: 'University of Utah Health', width: 160, height: 48 },
-    href: 'https://healthcare.utah.edu',
-    kind: 'deployment',
-  },
-  {
-    slug: 'qli',
-    name: 'QLI',
-    logo: { src: '/Logo/logo-qli.png', alt: 'QLI', width: 120, height: 48 },
-    href: 'https://qliomaha.com',
-    kind: 'deployment',
-  },
-  {
-    slug: 'resolut',
-    name: 'Resolut',
-    logo: { src: '/Logo/resolut-primary-logo-full-color-rgb.svg', alt: 'Resolut', width: 160, height: 48 },
-    href: 'https://www.resolutegroup.com',
-    kind: 'installer',
-  },
-  {
-    slug: 'epic',
-    name: 'Epic',
-    logo: { src: '/Logo/integration-logos/Epic.png', alt: 'Epic', width: 120, height: 48 },
-    kind: 'integration',
-  },
-  {
-    slug: 'hillrom',
-    name: 'Hillrom nurse call',
-    logo: { src: '/Logo/integration-logos/hillrom.jpeg', alt: 'Hillrom', width: 140, height: 48 },
-    kind: 'integration',
-  },
-  {
-    slug: 'baxter',
-    name: 'Baxter beds',
-    logo: { src: '/Logo/integration-logos/baxter.png', alt: 'Baxter', width: 120, height: 48 },
-    kind: 'integration',
-  },
-  {
-    slug: 'mychart',
-    name: 'MyChart Bedside',
-    logo: { src: '/Logo/integration-logos/mychart.png', alt: 'MyChart', width: 140, height: 48 },
-    kind: 'integration',
-  },
-  {
-    slug: 'qualtrics',
-    name: 'Qualtrics',
-    logo: { src: '/Logo/integration-logos/Qualtrics-Logo.jpg', alt: 'Qualtrics', width: 140, height: 48 },
-    kind: 'integration',
-  },
+  { slug: 'uofu-health', name: 'University of Utah Health', logo: { src: '/Logo/uofu-health-new.svg', alt: 'University of Utah Health', width: 160, height: 48 }, href: 'https://healthcare.utah.edu', kind: 'deployment' },
+  { slug: 'neilsen-rehab-hospital', name: 'Craig H. Neilsen Rehabilitation Hospital', logo: { src: '/Logo/partners/neilsen-rehab-hospital.svg', alt: 'Craig H. Neilsen Rehabilitation Hospital', width: 564, height: 214 }, href: 'https://healthcare.utah.edu/neilsen-physical-rehab-hospital', kind: 'deployment' },
+  { slug: 'qli', name: 'QLI', logo: { src: '/Logo/logo-qli.png', alt: 'QLI', width: 120, height: 48 }, href: 'https://qliomaha.com', kind: 'deployment' },
+  { slug: 'resolut', name: 'Resolut', logo: { src: '/Logo/resolut-primary-logo-full-color-rgb.svg', alt: 'Resolut', width: 160, height: 48 }, href: 'https://www.resolutegroup.com', kind: 'installer' },
+  // Integrations. Order: clinical systems first, then the client's list (2026-09-24).
+  { slug: 'epic', name: 'Epic', logo: { src: '/Logo/integration-logos/epic.svg', alt: 'Epic', width: 248, height: 97 }, kind: 'integration' },
+  { slug: 'mychart', name: 'MyChart Bedside', logo: { src: '/Logo/integration-logos/mychart.svg', alt: 'MyChart', width: 241, height: 37 }, kind: 'integration' },
+  { slug: 'hillrom', name: 'Hillrom nurse call', logo: { src: '/Logo/integration-logos/hillrom.png', alt: 'Hillrom', width: 141, height: 48 }, kind: 'integration' },
+  { slug: 'baxter', name: 'Baxter', logo: { src: '/Logo/integration-logos/baxter.svg', alt: 'Baxter', width: 1097, height: 183 }, kind: 'integration' },
+  { slug: 'stryker', name: 'Stryker', logo: { src: '/Logo/integration-logos/stryker.svg', alt: 'Stryker', width: 128, height: 34 }, kind: 'integration' },
+  { slug: 'qualtrics', name: 'Qualtrics', logo: { src: '/Logo/integration-logos/qualtrics.svg', alt: 'Qualtrics', width: 150, height: 54 }, kind: 'integration' },
+  { slug: 'centrak', name: 'CenTrak', logo: { src: '/Logo/integration-logos/centrak.png', alt: 'CenTrak', width: 448, height: 76 }, kind: 'integration' },
+  { slug: 'securitas-zulafly', name: 'Securitas Healthcare ZulaFly', logo: { src: '/Logo/integration-logos/securitas-zulafly.png', alt: 'Securitas Healthcare and ZulaFly', width: 1200, height: 292 }, kind: 'integration' },
+  { slug: 'servicenow', name: 'ServiceNow', logo: { src: '/Logo/integration-logos/servicenow.svg', alt: 'ServiceNow', width: 130, height: 19 }, kind: 'integration' },
+  { slug: 'connexall', name: 'Connexall', logo: { src: '/Logo/integration-logos/connexall.png', alt: 'Connexall', width: 1103, height: 269 }, kind: 'integration' },
+  { slug: 'fsi', name: 'FSI CMMS', logo: { src: '/Logo/integration-logos/fsi.svg', alt: 'FSI', width: 68, height: 27 }, kind: 'integration' },
+  { slug: 'surveymonkey', name: 'SurveyMonkey', logo: { src: '/Logo/integration-logos/surveymonkey.svg', alt: 'SurveyMonkey', width: 506, height: 76 }, kind: 'integration' },
+  { slug: 'spok', name: 'Spok Smart Web', logo: { src: '/Logo/integration-logos/spok.png', alt: 'Spok', width: 292, height: 120 }, kind: 'integration' },
+  { slug: 'legrand', name: 'Legrand', logo: { src: '/Logo/integration-logos/legrand.svg', alt: 'Legrand', width: 250, height: 62 }, kind: 'integration' },
+  { slug: 'crestron', name: 'Crestron', logo: { src: '/Logo/integration-logos/crestron.png', alt: 'Crestron', width: 936, height: 106 }, kind: 'integration' },
+  { slug: 'apple-tv', name: 'Apple TV', logo: { src: '/Logo/integration-logos/apple-tv.svg', alt: 'Apple TV', width: 53, height: 27 }, kind: 'integration' },
+  { slug: 'roku', name: 'Roku', logo: { src: '/Logo/integration-logos/roku.png', alt: 'Roku', width: 500, height: 156 }, kind: 'integration' },
+  { slug: 'johnson-controls', name: 'Johnson Controls', logo: { src: '/Logo/integration-logos/johnson-controls.png', alt: 'Johnson Controls', width: 476, height: 212 }, kind: 'integration' },
+  { slug: 'somfy', name: 'Somfy', logo: { src: '/Logo/integration-logos/somfy.svg', alt: 'Somfy', width: 151, height: 41 }, kind: 'integration' },
+  { slug: 'sapling', name: 'Sapling', logo: { src: '/Logo/integration-logos/sapling.png', alt: 'Sapling', width: 1004, height: 239 }, kind: 'integration', darken: true },
+  { slug: 'ascom', name: 'Ascom', logo: { src: '/Logo/integration-logos/ascom.svg', alt: 'Ascom', width: 828, height: 185 }, kind: 'integration' },
+  { slug: 'assa-abloy', name: 'ASSA ABLOY', logo: { src: '/Logo/integration-logos/assa-abloy.svg', alt: 'ASSA ABLOY', width: 50, height: 7 }, kind: 'integration' },
+  { slug: 'pdi', name: 'PDi Communication Systems', logo: { src: '/Logo/integration-logos/pdi.png', alt: 'PDi', width: 799, height: 364 }, kind: 'integration' },
+  { slug: 'samsung', name: 'Samsung', logo: { src: '/Logo/integration-logos/samsung.png', alt: 'Samsung', width: 1600, height: 425 }, kind: 'integration' },
+  { slug: 'lg', name: 'LG', logo: { src: '/Logo/integration-logos/lg.svg', alt: 'LG', width: 5076, height: 757 }, kind: 'integration' },
+  { slug: 'hello-robot', name: 'Hello Robot', logo: { src: '/Logo/integration-logos/hello-robot.png', alt: 'Hello Robot', width: 400, height: 64 }, kind: 'integration' },
 ]
 
 export function partnersByKind(kind: Partner['kind']): Partner[] {
   return partners.filter((p) => p.kind === kind)
 }
 
-/** Named integrations without a logo file yet. */
-export const integrationsWithoutLogo = ['RTLS (Centrak, Zulafly)', 'ServiceNow', 'CBORD food ordering', 'Connexall']
+/** Integrations shown as text until a logo file is available (CBORD now trades as Illumia; Lutron's site blocks downloads). */
+export const integrationsWithoutLogo = ['CBORD', 'Lutron']
 
 /* -------------------------------------------------------------------- stats */
 
-const nrhSource = { label: 'UUH Smart Room Features, September 2025' }
+const nrhSource = { label: 'NRH KPI Report, September 2025' }
 const retrofitSource = { label: 'UUH Smart Room Retrofit deck' }
 
 export const stats = {
@@ -238,14 +218,14 @@ export const stats = {
     value: '5,205',
     label: 'Commands sent by patients every day',
     scope: 'Craig H. Neilsen Rehabilitation Hospital',
-    source: retrofitSource,
+    source: nrhSource,
   },
   momentsPerDay: {
     id: 'momentsPerDay',
     value: '104',
     label: 'Moments of independence per patient, per day',
     scope: 'Craig H. Neilsen Rehabilitation Hospital',
-    source: retrofitSource,
+    source: nrhSource,
   },
   rooms: {
     id: 'rooms',
@@ -311,6 +291,7 @@ export const testimonials: Testimonial[] = [
     org: 'Craig H. Neilsen Rehabilitation Hospital',
     verified: true,
     source: 'HIMSS presentation, participant P19',
+    href: 'https://pedel.cs.utah.edu/publications',
   },
 ]
 

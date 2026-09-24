@@ -25,7 +25,7 @@ export const pages: Record<Route, { title: string; description: string }> = {
   '/devices': {
     title: 'Smart Devices',
     description:
-      'Tetradapt hardware: presence sensor, enterprise Bluetooth, standalone voice, sip-and-puff interface and elevator voice controller.',
+      'Tetradapt hardware: presence and fall detection sensors, enterprise Bluetooth, standalone voice, a sip-and-puff interface, and controllers for elevators, powered doors and beds.',
   },
   '/about': {
     title: 'Our Story',
