@@ -57,17 +57,22 @@ export const pages: Record<Route, { title: string; description: string }> = {
   },
 }
 
+/** Public URL path for a route: pages live at /about/ (see trailingSlash in next.config.js). */
+export function routePath(route: Route): string {
+  return route === '/' ? '/' : `${route}/`
+}
+
 export function pageMetadata(route: Route): Metadata {
   const page = pages[route]
   return {
     // The homepage keeps the brand line; interior pages use the "Page | Tetradapt" template.
     title: route === '/' ? { absolute: 'Tetradapt: Technology that restores independence' } : page.title,
     description: page.description,
-    alternates: { canonical: route },
+    alternates: { canonical: routePath(route) },
     openGraph: {
       title: page.title,
       description: page.description,
-      url: route,
+      url: routePath(route),
       type: 'website',
     },
   }
