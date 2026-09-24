@@ -1,0 +1,17 @@
+node_modules
+.next
+.git
+*.log
+.DS_Store
+.env*.local
+*.zip
+BACKUP*
+stockimages
+sharedwithme
+UUH-Images
+*.md
+Resources and assets
+/Logo
+.claude
+_unused-assets
+.do

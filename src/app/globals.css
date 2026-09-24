@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-white font-body text-brand-black antialiased;
+  }
+
+  /* One focus style for every interactive element. */
+  :focus-visible {
+    outline: 3px solid theme('colors.brand-red');
+    outline-offset: 3px;
+  }
+
+  .on-dark :focus-visible {
+    outline-color: theme('colors.brand-cream');
+  }
+
+  ::selection {
+    background: theme('colors.brand-red');
+    color: #fff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Brand scrollbar (WebKit only) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.brand-cream');
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.brand-red');
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.brand-red-dark');
+}
