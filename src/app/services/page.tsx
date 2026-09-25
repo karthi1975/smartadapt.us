@@ -145,10 +145,10 @@ export default function ServicesPage() {
             {installer && (
               <Card padding="lg">
                 <Image src={installer.logo.src} alt={installer.logo.alt} width={installer.logo.width} height={installer.logo.height} className="h-8 w-auto" />
-                <h3 className={cn(type.h4, 'mt-4 text-brand-black')}>Installation partner</h3>
+                <h3 className={cn(type.h4, 'mt-4 text-brand-black')}>Engineering Services</h3>
                 <p className={cn(type.small, 'mt-2')}>
-                  Tetradapt works with {installer.name}, a systems integrator, for commercial and residential installations. They install; we
-                  design, integrate and support.
+                  Tetradapt partners with {installer.name} to help projects move forward with confidence. {installer.name} is a multidisciplinary
+                  engineering firm built around one clear commitment: your success comes first.
                 </p>
                 <Button variant="link" href={installer.href!} external className="mt-3 text-sm">
                   Visit {installer.name}

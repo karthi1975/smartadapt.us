@@ -8,14 +8,12 @@ import SectionHeading from '@/components/ui/SectionHeading'
 import StatGroup from '@/components/ui/StatGroup'
 import VideoEmbed from '@/components/ui/VideoEmbed'
 import { type } from '@/components/ui/tokens'
-import { computedStats, contactHref, pageMetadata, press, publications, researchLinks, tracks, videos } from '@/content/site'
+import { contactHref, pageMetadata, press, publications, researchLinks, stats, tracks, videos } from '@/content/site'
 import { cn } from '@/lib/cn'
 
 export const metadata = pageMetadata('/research')
 
 export default function ResearchPage() {
-  const computed = computedStats()
-
   return (
     <>
       <PageHero
@@ -23,7 +21,7 @@ export default function ResearchPage() {
         title="Research and evidence"
         lead="Peer-reviewed research validating the impact of smart hospital rooms and accessible home technology on patient independence and care quality."
       >
-        <StatGroup stats={[computed.publications, computed.press, computed.years]} showSources={false} />
+        <StatGroup stats={[stats.publicationCollaborations, stats.grantAwards, stats.liveHospitalYears]} showSources={false} />
       </PageHero>
 
       {/* Copy supplied by the client, 2026-09-22. Links confirmed by the client. */}
@@ -41,10 +39,11 @@ export default function ResearchPage() {
 
       <Section id="publications">
         <SectionHeading
-          eyebrow="University of Utah PEDEL lab"
+          eyebrow="Research collaborations"
           title="Publications"
-          lead="Tetradapt partners with the University of Utah’s PEDEL (Personal Data and Empowerment Lab) on peer-reviewed research into smart hospital technology. Our founder, Dr. Jeffrey Rosenbluth, and our staff take part as investigators and collaborators. The studies cover patient and staff experiences in smart rooms, technology adoption after spinal cord injury, patient education and participation in research."
+          lead="Tetradapt partners with the University of Utah’s PEDEL (Personal Data and Empowerment Lab) and other investigators on peer-reviewed research into smart health care technology. Our founder, Dr. Jeffrey Rosenbluth, Brent Elieson, MBA and our staff take part as investigators and collaborators. The studies cover topics including patient and staff experiences in smart environments, technology adoption after spinal cord injury, human-robot co-adaptation, patient education and participation in research."
         />
+        <p className={cn(type.body, 'mb-6')}>The following is a sample of Tetradapt technology publication collaborations.</p>
         <LinkList items={publications} />
         <div className="mt-8 flex flex-wrap gap-6">
           <Button variant="link" href={researchLinks.pedelLab} external>

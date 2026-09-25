@@ -162,7 +162,7 @@ export const partners: Partner[] = [
   { slug: 'uofu-health', name: 'University of Utah Health', logo: { src: '/Logo/uofu-health-new.svg', alt: 'University of Utah Health', width: 160, height: 48 }, href: 'https://healthcare.utah.edu', kind: 'deployment' },
   { slug: 'neilsen-rehab-hospital', name: 'Craig H. Neilsen Rehabilitation Hospital', logo: { src: '/Logo/partners/neilsen-rehab-hospital.svg', alt: 'Craig H. Neilsen Rehabilitation Hospital', width: 564, height: 214 }, href: 'https://healthcare.utah.edu/neilsen-physical-rehab-hospital', kind: 'deployment' },
   { slug: 'qli', name: 'QLI', logo: { src: '/Logo/logo-qli.png', alt: 'QLI', width: 120, height: 48 }, href: 'https://qliomaha.com', kind: 'deployment' },
-  { slug: 'resolut', name: 'Resolut', logo: { src: '/Logo/resolut-primary-logo-full-color-rgb.svg', alt: 'Resolut', width: 160, height: 48 }, href: 'https://www.resolutegroup.com', kind: 'installer' },
+  { slug: 'resolut', name: 'Resolut', logo: { src: '/Logo/resolut-primary-logo-full-color-rgb.svg', alt: 'Resolut', width: 160, height: 48 }, href: 'https://www.resolutgroup.com', kind: 'installer' },
   // Integrations. Order: clinical systems first, then the client's list (2026-09-24).
   { slug: 'epic', name: 'Epic', logo: { src: '/Logo/integration-logos/epic.svg', alt: 'Epic', width: 248, height: 97 }, kind: 'integration' },
   { slug: 'mychart', name: 'MyChart Bedside', logo: { src: '/Logo/integration-logos/mychart.svg', alt: 'MyChart', width: 241, height: 37 }, kind: 'integration' },
@@ -255,26 +255,31 @@ export const stats = {
     scope: '108-nurse survey at NRH',
     source: retrofitSource,
   },
+  /* Research page figures supplied by the client, 2026-09-25. */
+  publicationCollaborations: {
+    id: 'publicationCollaborations',
+    value: '25+',
+    label: 'Peer-reviewed publication collaborations',
+  },
+  grantAwards: {
+    id: 'grantAwards',
+    value: '8',
+    label: 'Grant awards',
+  },
+  liveHospitalYears: {
+    id: 'liveHospitalYears',
+    value: '6',
+    label: 'Years experience running Smart technologies in a live hospital environment',
+  },
 } satisfies Record<string, Stat>
 
-export function computedStats(): { years: Stat; publications: Stat; press: Stat } {
+export function computedStats(): { years: Stat } {
   return {
     years: {
       id: 'years',
       value: `${yearsSince()}`,
       label: 'Years since the Tetradapt Initiative began',
       scope: 'Founded 2008',
-    },
-    publications: {
-      id: 'publications',
-      value: `${publications.length}`,
-      label: 'Peer-reviewed publications',
-      scope: 'University of Utah PEDEL lab',
-    },
-    press: {
-      id: 'press',
-      value: `${press.length}`,
-      label: 'Industry and press articles',
     },
   }
 }

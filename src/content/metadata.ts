@@ -35,7 +35,7 @@ export const pages: Record<Route, { title: string; description: string }> = {
   '/research': {
     title: 'Research',
     description:
-      'Peer-reviewed research from the University of Utah PEDEL lab on smart hospital rooms, technology adoption after spinal cord injury and patient education.',
+      'Peer-reviewed research with the University of Utah PEDEL lab and other investigators on smart health care environments, technology adoption after spinal cord injury, human-robot co-adaptation and patient education.',
   },
   '/community': {
     title: 'Community Program',

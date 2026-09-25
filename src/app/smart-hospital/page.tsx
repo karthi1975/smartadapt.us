@@ -164,7 +164,7 @@ export default function SmartHospitalPage() {
         <SectionHeading
           eyebrow="Proven results"
           title="Measured in a live hospital"
-          lead="Real-world data from the Craig H. Neilsen Rehabilitation Hospital and peer-reviewed research from the University of Utah PEDEL lab."
+          lead="Real-world data from the Craig H. Neilsen Rehabilitation Hospital and peer-reviewed research with the University of Utah PEDEL lab and other investigators."
         />
         <StatGroup variant="cards" stats={[stats.interactions, stats.commandsPerDay, stats.momentsPerDay]} showSources={false} />
         <div className="mt-12 rounded-2xl bg-brand-cream p-8">
